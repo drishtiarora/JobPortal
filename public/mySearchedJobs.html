@@ -1,0 +1,35 @@
+
+hellooo
+
+<div class="panel ">
+    <div class="panel-heading ">
+        <h2>JOB LIST</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>INDEX</th>
+                <th>JOB TITLE</th>
+                <th>JOB DESCRIPTION</th>
+                <th>Save JOBS</th>
+                <th>Apply JOBS</th>
+            </tr>
+            <tr ng-repeat="jobs in searchedData track by $index">
+                <td>{{$index}}</td>
+                <td>{{jobs.jobTitle}}</td>
+                <td>{{jobs.jobDescription}}</td>
+                <td>
+                    <button type="button" class="btn btn-success" ng-click="saveJob(jobs)"> Save Job</button>
+                </td>
+                <td>
+                        <button type="button" class="btn btn-success" ng-click="applyJob(jobs)"> Apply Job</button>
+                    </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</div>
+
+<button type="button" class="btn btn-success" ng-click="view_savedJobs()">My Saved Jobs</button>
+<button type="button" class="btn btn-success" ng-click="view_appliedJobs()">My Applied Jobs</button>

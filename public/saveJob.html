@@ -1,0 +1,26 @@
+<div class="container">
+        <div class="panel ">
+            <div class="panel-heading ">
+                <h2>SAVED JOBS</h2>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>INDEX</th>
+                        <th>JOB TITLE</th>
+                        <th>JOB DESCRIPTION</th>
+                        <th>KEYWORDS</th>
+                    </tr>
+                    <tr ng-repeat="jobs in saveJobData track by $index">
+                        <td>{{$index}}</td>
+                        <td>{{jobs.jobTitle}}</td>
+                        <td>{{jobs.jobDescription}}</td>
+                        <td>{{jobs.keywords}}</td>
+                        
+                    </tr>
+                </table>
+            </div>
+    
+        </div>
+    </div>
+   <button class="btn btn-danger" ng-click="reset()">RESET</button>
